@@ -1,3 +1,10 @@
 puppet-nagios-nrpe
 
 This is the puppet-nagios-nrpe module.
+
+
+USAGE
+
+1) add it as a gitmodule under the path modules/nagios_nrpe
+
+2) add "include nagios_nrpe" to puppet node definition
