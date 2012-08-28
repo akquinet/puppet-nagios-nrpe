@@ -10,7 +10,7 @@
   "checksums": {
     "Modulefile": "46a3f17819f560d36cf908835a10dbe4",
     "README": "af2f7dafabac8ebc6d6b95da51f1e9c3",
-    "manifests/init.pp": "b901943f9d8e68a6b40a2002bff21132",
+    "manifests/init.pp": "c264cd18641d75d1d7ba94ab99391063",
     "modules/wget/README": "d41d8cd98f00b204e9800998ecf8427e",
     "modules/wget/manifests/init.pp": "3dc2618163a1f0d717ad910bee416b2a",
     "spec/spec.opts": "a600ded995d948e393fbe2320ba8e51c",

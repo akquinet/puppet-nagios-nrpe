@@ -4,7 +4,7 @@ class nagios_nrpe () {
 	case $::operatingsystem {
 		centos, redhat, oel : {
 			$package_name="nagios-nrpe"
-			$plugins_package_name="nagios-plugins"
+			$plugins_package_name="nagios-plugins-all"
 			
 			$rpmforge_rpm_name = "rpmforge-release-0.5.2-2.el6.rf.x86_64.rpm"
 			$rpmforge_rpm_url = "http://pkgs.repoforge.org/rpmforge-release/$rpmforge_rpm_name"
