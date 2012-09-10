@@ -4,7 +4,7 @@ class nagios_nrpe () {
 	case $::operatingsystem {
 		centos, redhat, oel : {
 			$package_name="nagios-nrpe"
-			$plugins_package_name="nagios-plugins-all"
+			$plugins_package_name="nagios-plugins"
 			
 			$rpmforge_rpm_name = "rpmforge-release-0.5.2-2.el6.rf.x86_64.rpm"
 			$rpmforge_rpm_url = "http://pkgs.repoforge.org/rpmforge-release/$rpmforge_rpm_name"
@@ -22,11 +22,16 @@ class nagios_nrpe () {
 		debian, ubuntu : {
 			$package_name="nagios-nrpe-server"
 			$plugins_package_name="nagios-plugins"
+			
+			exec { "rpmforge_install" : 
+					command => "/bin/echo 'rpmforge repo is not required on ubuntu or debian'",
+			}
 		}
 	}
 	
 	package { "$package_name" :
 			ensure => present,
+			require => Exec["rpmforge_install"]
 	}
 	
 	package { "$plugins_package_name" :
