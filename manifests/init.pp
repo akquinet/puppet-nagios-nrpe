@@ -36,6 +36,6 @@ class nagios_nrpe () {
 	
 	package { "$plugins_package_name" :
 			ensure => present,
-			require => Package ["$package_name"]
+			require => Package["$package_name"]
 	}
 }
