@@ -32,7 +32,7 @@ class nagios_nrpe () {
       $plugins_package_name="nagios-plugins"
       
       exec { "rpmforge_install" : 
-          command => "/bin/echo 'rpmforge repo is not required on ubuntu or debian'",
+          command => "/bin/echo 'rpmforge repo is not required on opensuse or suse'",
       }
     }
 	}
