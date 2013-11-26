@@ -27,7 +27,7 @@ class nagios_nrpe () {
 					command => "/bin/echo 'rpmforge repo is not required on ubuntu or debian'",
 			}
 		}
-		opensuse, suse : {
+		opensuse, suse, sles : {
       $package_name="nagios-nrpe"
       $plugins_package_name="nagios-plugins"
       
